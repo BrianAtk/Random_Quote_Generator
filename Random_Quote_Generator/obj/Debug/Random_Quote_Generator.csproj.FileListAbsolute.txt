@@ -1,0 +1,4 @@
+C:\CodeCamp\Random_Quote_Generator\Random_Quote_Generator\bin\Random_Quote_Generator.dll
+C:\CodeCamp\Random_Quote_Generator\Random_Quote_Generator\bin\Random_Quote_Generator.pdb
+C:\CodeCamp\Random_Quote_Generator\Random_Quote_Generator\obj\Debug\Random_Quote_Generator.dll
+C:\CodeCamp\Random_Quote_Generator\Random_Quote_Generator\obj\Debug\Random_Quote_Generator.pdb

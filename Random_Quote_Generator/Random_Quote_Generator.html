@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-size: cover;
+            color: white;
+            font-family: times new Roman;
+            font-size: 20px;
+            margin-top: 25px;
+            text-align: center;
+            overflow: scroll;
+            max-height: 250px;
+            width: 100%;
+            background-image: url("http://i173.photobucket.com/albums/w71/brian_atkins1/beautifulLake%201_zpsodapl979.jpg");
+        }
+
+
+        .quote {
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: 25px;
+        }
+
+        .author {
+            font-style: italic;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: 25px;
+        }
+
+        .quoteBorder {
+            margin-left: 50px;
+            margin-right: 50px;
+            border-radius: 50px;
+            border-style: solid;
+            box-shadow: -10px 10px blue;
+        }
+
+        .btn {
+            box-shadow: -10px 10px white;
+            border-radius: 25px;
+            margin: 10px;
+            box-shadow: -5px 5px blue;
+            border: 2px solid white;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: white;
+            background-color: blue;
+        }
+        .header {
+            font-size:larger;
+        }
+
+
+        @media all and (max-width: 1200px) { /* screen size until 1200px */
+            body{
+            font-size: 1.5em; /* 1.5x default size */
+        }
+
+        }
+
+        @media all and (max-width: 1000px) { /* screen size until 1000px */
+            body {
+                font-size: 1.2em; /* 1.2x default size */
+            }
+        }
+
+        @media all and (max-width: 500px) { /* screen size until 500px */
+            body {
+                font-size: 0.8em; /* 0.8x default size */
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class='col-xs-12 col-md-4 col-md-offset-4'>
+             
+                <div class='header' >Random Quotes</div>
+            </div>
+            <!-- class=-->
+        </div>
+        <!-- class="row"-->
+        <div class="row">
+            <div class='col-xs-12 visible-sm visible-xs'>
+                <button type="submit" class="btn btn-sm newQuote">New Quote</button>
+            </div>
+            <div class='col-md-4 col-md-offset-4 visible-md'>
+                <button type="submit" class="btn btn-sm newQuote">New Quote</button>
+            </div>
+            <div class='col-lg-4 col-lg-offset-4 visible-lg'>
+                <button type="submit" class="btn btn-lg newQuote">New Quote</button>
+            </div>
+            <!--class= -->
+        </div>
+        <!-- class="row"-->
+        <div class="row">
+
+            <div class='col-lg-12'>
+             
+                <div class='quoteBorder'>
+                    <div class='quote'>quote</div>
+                    <div class='author'>author</div>
+                </div>
+            </div>
+            <!--class= -->
+        </div>
+        <!-- class="row"-->
+    </div>
+    <!--container-->
+    <script>
+        var arrQuotes = [];
+        var quote;
+        var rand;
+        arrQuotes[0] = { "Quote": "Because it's there.", "author": "Anonymous" };
+        arrQuotes[1] = { "Quote": "The only way to climb properly is to realize that just getting up a route is nothing, the way it is done is everything.", "author": "Royal Robbins" };
+        arrQuotes[2] = { "Quote": "It is more noble to give yourself completely to one individual than to labor diligently for the salvation of the masses.", "author": "Dag Hammarskjold, Sec. Gen. of the UN" };
+        arrQuotes[3] = { "Quote": "Do not go gentle into that good night. Rage, rage against the dying of the light.", "author": "Dylan Thomas" };
+        arrQuotes[4] = { "Quote": "Knowledge keeps about as well as fish.", "author": "Alfred North Whitehead" };
+        arrQuotes[5] = { "Quote": "I have decided to make my life my argument.", "author": "Albert Schweitzer" };
+        arrQuotes[6] = { "Quote": "Maps are a way of organizing wonder.", "author": "Edward Tufte" };
+        arrQuotes[7] = { "Quote": "The significant problems we face cannot be solved at the same level of thinking we were at when we created them.", "author": "Albert Einstein" };
+        arrQuotes[8] = { "Quote": "One man asked another on the death of a mutual friend, 'How much did he leave?' His friend responded, 'He left it all.'", "author": "Proverb" };
+        arrQuotes[9] = { "Quote": "For you will look smart and feel ignorant and the patient will not know which day it is for you and you will pretend to be smart out of ignorance.", "author": "John Stone, Gaudeamus Igitur" };
+
+        function genRandom(arr) {
+            rand = Math.floor(Math.random() * 9) + 0
+            quote = arr[rand];
+
+            $(".quote").html(quote.Quote)
+            $(".author").html(quote.author);
+        };
+
+        $(document).ready(function () {
+            genRandom(arrQuotes);
+
+            $(".newQuote").click(function () {
+                genRandom(arrQuotes);
+
+            });
+        });
+    </script>
+</body>
+</html>
+
+
